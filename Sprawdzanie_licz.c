@@ -1,35 +1,26 @@
 #include <stdio.h>
-
 //Deklaracja zmiennych globalnych
 int ciag[9];
 int wybor = 0;
-
-
 void wprowadzanie(){
-	
 	int i;
 //Petla do wprowadzania danych 	
 	for(i=0;i<10;i++){
 		printf("Wprowadz %i liczbe ciagu liczb calkowitych: \n", i+1);
 		scanf("%i", &ciag[i]);
 	}
-	
 }
 
 float liczSredniaParzystych(){
-	
 //Deklaracja zmiennych funkcji wraz z ich zerowaniem
 	float sredniaParzystych = 0;
 	int licznikParzystych = 0, i;
-
 	for(i=0;i<10;i++){
-		
 		if(ciag[i] % 2 == 0){
 			licznikParzystych++;
 			sredniaParzystych += ciag[i];
 		}
 	}
-	
 	if(licznikParzystych == 0){
 		printf("Brak liczb parzystych w ciagu\n");
 	}else{
@@ -46,7 +37,6 @@ void wyswietlCiag(){
 	}
 	printf("\n");
 }
-
 void sortujRosnaco(){
 	int i, j, temp;
 	for(j=0; j<10; j++){
@@ -61,7 +51,6 @@ void sortujRosnaco(){
     printf("Posortowano\n");
 	wyswietlCiag();
 }
-
 int podajDominante(){
 	int i, j, iloscWystapien, maxWystapien = 0, dominanta;
 	
@@ -86,10 +75,7 @@ int podajDominante(){
 	}	
 return 0;
 }
-
-
 void menu(){
-	
 	printf("\nMenu - wybierz opcje\n");
 	printf("1 - wprowadzanie danych\n");
 	printf("2 - wyswietl dominante\n");
@@ -123,8 +109,6 @@ void menu(){
 			break;
 	}
 }
-
-
 
 int main()
 {
